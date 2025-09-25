@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    /* Core Colors */
+    --background: 240 10% 4%;
+    --foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --border: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --card: 240 10% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --input: 217.2 32.6% 17.5%;
+    --radius: 0;
+  }
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --border: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --card: 240 10% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --input: 217.2 32.6% 17.5%;
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-background text-foreground font-mono;
+    background-image: radial-gradient(rgba(0, 150, 255, 0.1) 1px, transparent 0);
+    background-size: 10px 10px;
+    position: relative;
+  }
+  body::after {
+    content: ' ';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2147483647;
+    pointer-events: none;
+    background-size: 100% 2px, 3px 100%;
+    animation: scanline 10s linear infinite;
+  }
+  @keyframes scanline {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100vh; }
+  }
+}
+@layer components {
+  .retro-btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-lg font-pixel uppercase tracking-widest
+           border-2 bg-transparent transition-all duration-200
+           disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .retro-btn-cyan {
+    @apply retro-btn border-cyan text-cyan shadow-neon-cyan
+           hover:bg-cyan hover:text-background hover:shadow-none;
+  }
+  .retro-btn-magenta {
+    @apply retro-btn border-magenta text-magenta shadow-neon-magenta
+           hover:bg-magenta hover:text-background hover:shadow-none;
+  }
+  .retro-btn-lime {
+    @apply retro-btn border-lime text-lime shadow-neon-lime
+           hover:bg-lime hover:text-background hover:shadow-none;
+  }
+  .retro-card {
+    @apply bg-black/50 backdrop-blur-sm border-2 p-6;
+  }
+}
