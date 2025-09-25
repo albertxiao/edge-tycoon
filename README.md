@@ -2,7 +2,7 @@
 
 A visually stunning, retro-themed multiplayer property trading board game with CPU opponents, built on Cloudflare's edge network.
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/albertxiao/edge-tycoon)
 
 ## 📖 About The Project
 
@@ -101,4 +101,4 @@ This command will build the frontend application, then deploy both the static as
 
 Alternatively, you can deploy your own version of Edge Tycoon with a single click.
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/albertxiao/edge-tycoon)
